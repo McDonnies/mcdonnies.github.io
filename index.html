@@ -29,9 +29,15 @@ a:hover{color:var(--muted)}
 a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 
 header{padding:56px 0 0}
+.head-row{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.photo{width:108px;height:auto;border-radius:6px;flex-shrink:0}
 h1{font-size:26px;font-weight:650;letter-spacing:-.01em}
 .role{color:var(--muted);margin-top:4px}
 .intro{margin-top:28px}
+@media (max-width:560px){
+  .head-row{flex-direction:column-reverse}
+  .photo{width:96px}
+}
 
 section{margin-top:56px}
 h2{
@@ -60,8 +66,13 @@ footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
 
 <div class="wrap">
 <header>
-  <h1>Daniil Maklakov</h1>
-  <p class="role">Backend developer — Python/FastAPI · TypeScript/Fastify · CRM &amp; API integrations</p>
+  <div class="head-row">
+    <div>
+      <h1>Daniil Maklakov</h1>
+      <p class="role">Backend developer — Python/FastAPI · TypeScript/Fastify · CRM &amp; API integrations</p>
+    </div>
+    <img class="photo" src="photo.jpg" alt="Daniil Maklakov" width="320" height="282">
+  </div>
   <p class="intro">
     I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines
     and CRM synchronisation that run in production for real clients.
