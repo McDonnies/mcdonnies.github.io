@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daniil Maklakov — Backend Developer</title>
 <meta name="description" content="Backend developer — Python/FastAPI, TypeScript/Fastify. CRM & API integrations, OAuth2 flows, webhook pipelines.">
+<link rel="canonical" href="https://mcdonnies.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://mcdonnies.github.io/">
+<meta property="og:title" content="Daniil Maklakov — Backend Developer">
+<meta property="og:description" content="I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines and CRM synchronisation that run in production.">
+<meta property="og:image" content="https://mcdonnies.github.io/photo.jpg">
+<meta property="og:image:alt" content="Daniil Maklakov">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniil Maklakov — Backend Developer">
+<meta name="twitter:description" content="I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines and CRM synchronisation that run in production.">
+<meta name="twitter:image" content="https://mcdonnies.github.io/photo.jpg">
 <style>
 :root{
   --bg:#ffffff;
@@ -54,6 +66,13 @@ h2{
 .project-lang{color:var(--muted);font-size:13.5px;white-space:nowrap}
 .project p{margin-top:6px;color:var(--muted);font-size:15px}
 
+.job{padding:14px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.job-title{font-weight:600;font-size:15.5px}
+.job-date{color:var(--muted);font-size:13.5px;white-space:nowrap}
+.job p{margin-top:4px;color:var(--muted);font-size:15px}
+
 .stack p{margin-top:4px}
 .stack b{font-weight:600}
 
@@ -80,11 +99,47 @@ footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
   </p>
   <p class="intro">
     Originally a physics engineer, I moved into software through a computer science
-    degree in Strasbourg. I work remotely with clients in the US and Europe, deploy
-    and maintain what I ship, and use LLMs daily — both as tools and inside products.
+    degree in Strasbourg. I work remotely, deploy and maintain what I ship, and use
+    LLMs daily — both as tools and inside products.
     Based in France. Open to backend and AI-integration roles.
   </p>
 </header>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">Backend Developer — Optima Fence and Deck</span>
+      <span class="job-date">Feb 2026 – present</span>
+    </div>
+    <p>Freelance, remote. CRM integrations in Python/FastAPI, deployed and operated on AWS.</p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">Backend Developer — H Alliance</span>
+      <span class="job-date">May – Jun 2026</span>
+    </div>
+    <p>Freelance, remote. Meta Business and Instagram APIs synchronised with HubSpot CRM in TypeScript.</p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">Backend Developer — Thumbtack API gateway</span>
+      <span class="job-date">Nov 2025 – early 2026</span>
+    </div>
+    <p>Freelance, remote. OAuth 2.0 gateway and synchronisation pipeline across Thumbtack, HubSpot and Zoho. Still in production.</p>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">BSc Computer Science — University of Strasbourg</span>
+      <span class="job-date">2023 – 2026</span>
+    </div>
+    <p>Preceded by a BSc in Engineering Physics, Kazan Federal University (2016 – 2020).</p>
+  </div>
+</section>
 
 <section>
   <h2>Projects</h2>
@@ -94,7 +149,7 @@ footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
       <a class="project-name" href="https://github.com/McDonnies/optima-integrations-public">optima-integrations</a>
       <span class="project-lang">Python</span>
     </div>
-    <p>FastAPI service keeping GoHighLevel CRM and ServiceTitan in two-way sync — 13+ webhook event types, status mapping, deduplication — plus lead intake from Yelp, Thumbtack and HouseCall Pro. Sanitized production codebase.</p>
+    <p>Replaced the client's no-code Zapier automations with Python pollers and webhook handlers, removing the dependency without changing anything on the CRM side. Keeps GoHighLevel and ServiceTitan in two-way sync: 13+ webhook event types, status mapping, deduplication, plus lead intake from Yelp, Thumbtack and HouseCall Pro. Sanitized production codebase.</p>
   </div>
 
   <div class="project">
@@ -110,7 +165,7 @@ footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
       <a class="project-name" href="https://github.com/McDonnies/thumbtack-proxy-public">thumbtack-proxy</a>
       <span class="project-lang">Python</span>
     </div>
-    <p>Production OAuth 2.0 reverse proxy for the Thumbtack API: full token lifecycle, FastAPI and PostgreSQL, Dockerised behind nginx, with an internal admin panel.</p>
+    <p>Production OAuth 2.0 reverse proxy for the Thumbtack API: full token lifecycle, FastAPI and PostgreSQL, Dockerised behind nginx, with an internal admin panel. Built in late 2025 and still running unattended.</p>
   </div>
 
   <div class="project">
@@ -141,6 +196,7 @@ footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
   <h2>Contact</h2>
   <p><a href="mailto:daniil.maklakov8@gmail.com">daniil.maklakov8@gmail.com</a></p>
   <p><a href="https://github.com/McDonnies">github.com/McDonnies</a> · <a href="https://www.linkedin.com/in/maklakov-daniil/">linkedin.com/in/maklakov-daniil</a></p>
+  <p><a href="Daniil_Maklakov_CV.pdf">Download CV (PDF)</a></p>
   <p>English · French · Russian</p>
 </section>
 
