@@ -1,215 +1,461 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniil Maklakov — Backend Developer</title>
-<meta name="description" content="Backend developer — Python/FastAPI, TypeScript/Fastify. CRM & API integrations, OAuth2 flows, webhook pipelines.">
-<link rel="canonical" href="https://mcdonnies.github.io/">
-<meta property="og:type" content="profile">
-<meta property="og:url" content="https://mcdonnies.github.io/">
-<meta property="og:title" content="Daniil Maklakov — Backend Developer">
-<meta property="og:description" content="I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines and CRM synchronisation that run in production.">
-<meta property="og:image" content="https://mcdonnies.github.io/photo.jpg">
-<meta property="og:image:alt" content="Daniil Maklakov">
-<meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Daniil Maklakov — Backend Developer">
-<meta name="twitter:description" content="I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines and CRM synchronisation that run in production.">
-<meta name="twitter:image" content="https://mcdonnies.github.io/photo.jpg">
-<style>
-:root{
-  --bg:#ffffff;
-  --ink:#111411;
-  --muted:#606a63;
-  --line:#e4e7e3;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#14161a;--ink:#e8eae7;--muted:#9aa39c;--line:#2a2e33}
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size:16.5px;
-  line-height:1.65;
-}
-.wrap{max-width:780px;margin:0 auto;padding:0 24px}
-a{color:inherit;text-underline-offset:3px}
-a:hover{color:var(--muted)}
-a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-
-header{padding:56px 0 0}
-.head-row{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
-.photo{width:150px;height:auto;border-radius:6px;flex-shrink:0}
-h1{font-size:26px;font-weight:650;letter-spacing:-.01em}
-.role{color:var(--muted);margin-top:4px}
-.intro{margin-top:28px}
-@media (max-width:560px){
-  .head-row{flex-direction:column-reverse}
-  .photo{width:96px}
-}
-
-section{margin-top:56px}
-h2{
-  font-size:13px;font-weight:600;
-  text-transform:uppercase;letter-spacing:.08em;
-  color:var(--muted);
-  margin-bottom:8px;
-}
-
-.project{padding:20px 0;border-top:1px solid var(--line)}
-.project:last-child{border-bottom:1px solid var(--line)}
-.project-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.project-name{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:15px;font-weight:600}
-.project-lang{color:var(--muted);font-size:13.5px;white-space:nowrap}
-.project p{margin-top:6px;color:var(--muted);font-size:15px}
-
-.job{padding:14px 0;border-top:1px solid var(--line)}
-.job:last-child{border-bottom:1px solid var(--line)}
-.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.job-title{font-weight:600;font-size:15.5px}
-.job-date{color:var(--muted);font-size:13.5px;white-space:nowrap}
-.job p{margin-top:4px;color:var(--muted);font-size:15px}
-
-.stack p{margin-top:4px}
-.stack b{font-weight:600}
-
-.contact p{margin-top:6px}
-
-footer{margin:72px 0 40px;color:var(--muted);font-size:13.5px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniil Maklakov — Développeur backend Python · Alternance</title>
+  <meta name="description" content="Développeur backend freelance · Strasbourg et Paris. Python, intégrations de logiciels et automatisation. Recherche une alternance avec le MSc Epitech, 2026–2028.">
+  <link rel="canonical" href="https://mcdonnies.github.io/">
+  <meta name="theme-color" content="#f7f7f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1c1a" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://mcdonnies.github.io/">
+  <meta property="og:title" content="Daniil Maklakov — Développeur backend Python · Alternance">
+  <meta property="og:description" content="Développeur backend freelance · Strasbourg et Paris. Python, intégrations de logiciels et automatisation. Recherche une alternance avec le MSc Epitech, 2026–2028.">
+  <meta property="og:image" content="https://mcdonnies.github.io/photo.jpg">
+  <meta property="og:image:alt" content="Portrait de Daniil Maklakov">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #f7f7f3; --ink: #262622; --muted: #595951;
+      --accent: #8a432e; --line: #d7d7ce; --soft: #ecece5;
+      --notice: #ecd0ba; --notice-ink: #30241e; --notice-line: #bc9780;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: clamp(18px, 1.2vw, 23px); line-height: 1.65; }
+    h1, h2, h3, p { margin: 0; }
+    a { color: inherit; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+    [hidden] { display: none !important; }
+    .frame { width: min(90%, 1680px); margin-inline: auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 28px; font-size: 16px; }
+    .contact-links a { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+    .contact-links a:hover { text-decoration: underline; }
+    .contact-links .email { overflow-wrap: anywhere; }
+    .header-contacts { flex: 1; }
+    .header-contacts .email { margin-right: auto; }
+    .contact-links .cv-link { padding: 0 17px; border: 1px solid var(--line); border-radius: 4px; }
+    .language-switch { display: flex; gap: 4px; flex-shrink: 0; border-left: 1px solid var(--line); padding-left: 20px; }
+    .language-switch button { min-width: 44px; min-height: 44px; padding: 8px; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 15px; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; font-weight: 650; }
+    .skip-link { position: absolute; top: -100px; left: 20px; z-index: 3; padding: 12px; background: var(--paper); }
+    .skip-link:focus { top: 12px; }
+    .portfolio { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(48px, 6vw, 112px); align-items: start; padding-top: 52px; }
+    .profile { padding-bottom: 32px; }
+    .sidebar, .content { min-width: 0; }
+    .sidebar-skills { padding-top: 24px; border-top: 1px solid var(--line); }
+    .sidebar-skills h2 { font-size: 21px; font-weight: 600; }
+    .portrait { display: block; width: 210px; max-width: 100%; height: auto; border-radius: 6px; margin-bottom: 28px; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-size: 48px; font-weight: 400; letter-spacing: -.045em; line-height: 1.08; }
+    h1 span { display: block; }
+    .role { margin-top: 18px; font-size: 21px; font-weight: 550; line-height: 1.45; }
+    .location { color: var(--muted); font-size: 16px; margin-top: 12px; }
+    .profile-note { margin-top: 24px; color: var(--muted); font-size: 17px; }
+    .section-nav { display: grid; gap: 4px; margin-top: 24px; }
+    .section-nav a { width: fit-content; padding: 5px 0; color: var(--muted); font-size: 16px; text-decoration: none; }
+    .section-nav a:hover { color: var(--accent); text-decoration: underline; }
+    .intro { font-size: clamp(22px, 1.7vw, 29px); line-height: 1.5; letter-spacing: -.018em; }
+    .intro strong { font-weight: 600; }
+    .intro-note { margin-top: 18px; color: var(--muted); }
+    .availability { margin-top: 26px; padding: 22px 26px; background: var(--notice); color: var(--notice-ink); border-radius: 8px; }
+    .availability h2 { font-size: clamp(24px, 1.8vw, 28px); font-weight: 650; line-height: 1.3; letter-spacing: -.025em; }
+    .availability-note { font-size: 16px; margin-top: 6px; }
+    .availability table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 17px; line-height: 1.5; }
+    .availability th, .availability td { border-top: 1px solid var(--notice-line); padding: 10px 0; text-align: left; vertical-align: top; }
+    .availability th { width: 160px; padding-right: 24px; font-size: 15px; font-weight: 500; }
+    .availability td { font-weight: 600; }
+    .availability tr:last-child th, .availability tr:last-child td { padding-bottom: 0; }
+    .schedule { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+    .schedule span { white-space: nowrap; }
+    .content-section { margin-top: 58px; }
+    .section-head { padding-top: 20px; margin-bottom: 28px; border-top: 2px solid var(--ink); }
+    .section-head h2 { font-size: 28px; font-weight: 650; letter-spacing: -.025em; line-height: 1.35; }
+    .section-head p { margin-top: 7px; font-size: 16px; color: var(--muted); }
+    .work-item { padding: 28px 0; }
+    .section-head + .work-item { padding-top: 0; }
+    .work-item + .work-item { border-top: 1px solid var(--line); }
+    .work-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 24px; }
+    .work-head h3 { font-size: 22px; font-weight: 600; letter-spacing: -.015em; }
+    .date { font-size: 15px; color: var(--muted); }
+    .work-role { margin-top: 4px; color: var(--accent); font-size: 16px; }
+    .work-copy { margin-top: 16px; }
+    .work-points { padding-left: 1.1em; margin: 16px 0 0; }
+    .work-points li { padding-left: .25em; }
+    .work-points li + li { margin-top: 12px; }
+    .work-points li::marker { color: var(--accent); }
+    .work-meta { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 24px; margin-top: 18px; font-size: 15px; }
+    .work-tech { color: var(--muted); }
+    .source-link { white-space: nowrap; }
+    details { margin-top: 15px; font-size: 16px; color: var(--muted); }
+    summary { width: fit-content; min-height: 36px; padding: 5px 0; cursor: pointer; }
+    details p { margin-top: 10px; }
+    .education-list { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 32px; }
+    .education-row { min-width: 0; padding: 4px 0; }
+    .education-row .date { display: block; margin-bottom: 10px; color: var(--accent); font-weight: 600; }
+    .education-row h3 { font-size: 20px; font-weight: 600; line-height: 1.4; }
+    .education-row .degree { margin-top: 8px; font-size: 17px; }
+    .education-row .education-note { margin-top: 8px; font-size: 16px; color: var(--muted); }
+    .education-upcoming { grid-column: 1 / -1; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 24px; padding: 24px; border: 1px solid var(--line); border-radius: 6px; background: var(--soft); }
+    .education-upcoming h3 { font-size: 25px; }
+    .education-upcoming .date { margin: 4px 0 0; }
+    .skills { display: grid; gap: 22px; margin: 22px 0 0; font-size: 16px; }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 5px 0 0; color: var(--muted); }
+    footer { grid-column: 1 / -1; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 26px 0; border-top: 2px solid var(--ink); font-size: 15px; color: var(--muted); }
+    footer .contact-links { color: var(--ink); }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #1b1c1a; --ink: #eeeee8; --muted: #bfc0b7; --accent: #dfab94; --line: #3b3d37; --soft: #272923; }
+    }
+    @media (min-width: 1600px) { .portfolio { grid-template-columns: 340px minmax(0, 1fr); } .portrait { width: 240px; } .profile-note { font-size: 19px; } }
+    @media (max-width: 1100px) {
+      .portfolio { grid-template-columns: 240px minmax(0, 1fr); gap: 42px; }
+      h1 { font-size: 42px; }
+      .availability { padding: 22px 24px; }
+      .education-upcoming { grid-template-columns: 1fr; gap: 12px; }
+      .education-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 800px) {
+      .frame { width: calc(100% - 40px); }
+      .topbar { gap: 12px; padding: 12px 0; align-items: flex-start; }
+      .header-contacts { gap: 0 20px; }
+      .header-contacts .email { flex-basis: 100%; font-size: 14px; }
+      .language-switch { padding-left: 8px; }
+      .language-switch button { min-width: 36px; }
+      .portfolio { display: flex; flex-direction: column; gap: 0; padding-top: 30px; }
+      .sidebar { display: contents; }
+      .profile { order: 0; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 0 24px; padding-bottom: 28px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
+      .portrait { grid-column: 2; grid-row: 1; width: 140px; margin: 0; }
+      .identity { grid-column: 1; grid-row: 1; }
+      h1 { font-size: 38px; }
+      h1 span { display: inline; }
+      .role { margin-top: 12px; font-size: 19px; }
+      .location { font-size: 15px; }
+      .profile-note { display: none; }
+      .section-nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 20px; }
+      .content { order: 1; width: 100%; }
+      .sidebar-skills { order: 2; width: 100%; margin-top: 28px; }
+      .skills { grid-template-columns: 1fr 1fr; gap: 24px; }
+      footer { order: 3; margin-top: 40px; }
+      .intro { font-size: 23px; }
+      .content-section { margin-top: 40px; }
+      .section-head h2 { font-size: 25px; }
+      .education-list { grid-template-columns: 1fr 1fr; }
+      .education-upcoming { grid-template-columns: 100px minmax(0, 1fr); }
+      .work-head h3 { font-size: 21px; }
+    }
+    @media (max-width: 480px) {
+      .topbar { flex-wrap: wrap; position: relative; padding-top: 8px; }
+      .header-contacts { flex-basis: 100%; padding-top: 40px; gap: 4px 24px; }
+      .header-contacts .email { position: absolute; top: 8px; left: 0; min-height: 36px; font-size: 13px; }
+      .language-switch { position: absolute; top: 8px; right: -6px; border: 0; padding: 0; gap: 0; }
+      .language-switch button { min-width: 32px; min-height: 36px; font-size: 13px; }
+      .contact-links { font-size: 15px; gap: 8px 24px; }
+      .profile { grid-template-columns: minmax(0, 1fr) 112px; gap: 0 16px; }
+      .portrait { width: 112px; }
+      h1 { font-size: 34px; }
+      h1 span { display: block; }
+      .role { font-size: 17px; }
+      .availability { padding: 20px; }
+      .availability h2 { font-size: 26px; }
+      .availability th { width: 39%; padding-right: 14px; font-size: 14px; }
+      .availability td { font-size: 16px; }
+      .schedule span { white-space: normal; }
+      .education-list, .education-upcoming, .skills { grid-template-columns: 1fr; }
+      .education-upcoming { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
 <body>
-
-<div class="wrap">
-<header>
-  <div class="head-row">
-    <div>
-      <h1>Daniil Maklakov</h1>
-      <p class="role">Backend developer — Python/FastAPI · TypeScript/Fastify · CRM &amp; API integrations</p>
+  <a class="skip-link" href="#top">Aller au contenu</a>
+  <header class="frame topbar">
+    <nav class="contact-links header-contacts" aria-label="Liens de contact">
+          <a class="email" href="mailto:daniil.maklakov@epitech.eu">daniil.maklakov@epitech.eu</a>
+          <a href="https://github.com/McDonnies">GitHub</a>
+          <a href="https://www.linkedin.com/in/maklakov-daniil/">LinkedIn</a>
+          <a class="cv-link" href="Daniil_Maklakov_CV.pdf" download aria-label="Télécharger le CV (PDF)">CV <span aria-hidden="true">↓</span></a>
+        </nav>
+    <div class="language-switch" role="group" aria-label="Choisir la langue" hidden>
+      <button type="button" data-language="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+      <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
     </div>
-    <img class="photo" src="photo.jpg" alt="Daniil Maklakov" width="450" height="415">
-  </div>
-  <p class="intro">
-    I build the plumbing between products: API gateways, OAuth2 flows, webhook pipelines
-    and CRM synchronisation that run in production for real clients.
-    Freelance backend developer since late 2025.
-  </p>
-  <p class="intro">
-    Originally a physics engineer, I moved into software through a computer science
-    degree in Strasbourg. I work remotely, deploy and maintain what I ship, and use
-    LLMs daily — both as tools and inside products.
-    Based in France. Open to backend and AI-integration roles.
-  </p>
-</header>
+  </header>
+  <main id="top" tabindex="-1">
+    <div class="frame portfolio" data-page="fr" lang="fr">
+      <div class="sidebar">
+      <aside class="profile" aria-labelledby="name-fr">
+        <img class="portrait" src="photo.jpg" width="450" height="415" alt="Portrait de Daniil Maklakov">
+        <div class="identity">
+          <h1 id="name-fr">Daniil <span>Maklakov</span></h1>
+          <p class="role">Développeur backend</p>
+          <p class="location">Strasbourg · Paris / Île-de-France</p>
+        </div>
+        <p class="profile-note">Formé en physique, puis en informatique. Je travaille en Python et TypeScript, en freelance depuis fin 2025.</p>
+        <nav class="section-nav" aria-label="Parcourir le portfolio"><a href="#education-fr">Formation</a><a href="#experience-fr">Expérience</a><a href="#projects-fr">Projets</a></nav>
+      </aside>
+      <section class="sidebar-skills" aria-labelledby="skills-fr">
+        <h2 id="skills-fr">Compétences</h2>
+        <dl class="skills"><div><dt>Automatisation</dt><dd>Python, FastAPI, API REST, webhooks, workflows Zapier, alertes et tâches récurrentes</dd></div><div><dt>IA &amp; agents</dt><dd>Claude Code, MCP client/serveur, APIs LLM (OpenAI, Llama, Groq), prompt engineering</dd></div><div><dt>Données</dt><dd>PostgreSQL, MySQL, SQL, ETL, mapping et déduplication</dd></div><div><dt>Web</dt><dd>TypeScript / JavaScript, Node.js, React, HTML / CSS, Jinja2</dd></div><div><dt>Production</dt><dd>Tests automatisés, CI/CD, Docker, nginx, Linux, AWS, Git / GitHub</dd></div><div><dt>Langues</dt><dd>Français, anglais, russe</dd></div></dl>
+      </section>
+      </div>
+      <div class="content">
+        <p class="intro">Je développe les connexions entre les logiciels d’une entreprise : <strong>synchronisation des données clients, authentification et automatisation.</strong></p>
+        <p class="intro-note">Je prends en charge le développement, la mise en production et la maintenance de ces services.</p>
+        <aside class="availability" aria-labelledby="availability-fr">
+          <h2 id="availability-fr">Recherche d’alternance · Python / IA</h2>
+          <p class="availability-note">Contrat d’apprentissage · MSc Epitech · Bac+5</p>
+          <table aria-labelledby="availability-fr"><tbody><tr><th scope="row">Disponibilité</th><td>Immédiate</td></tr><tr><th scope="row">Rythme</th><td><div class="schedule"><span>6 semaines en entreprise</span><span>2 semaines de cours</span></div></td></tr></tbody></table>
+        </aside>
+        <section class="content-section" id="education-fr" aria-labelledby="education-heading-fr">
+          <div class="section-head"><h2 id="education-heading-fr">Formation</h2></div>
+          <div class="education-list">
+          <article class="education-row education-upcoming"><span class="date">2026–2028</span><div><h3>Epitech</h3><p class="degree">MSc Architecte de systèmes d’information · Bac+5</p><p class="education-note">En alternance · Rentrée le 5 octobre 2026</p></div></article>
+          <article class="education-row"><span class="date">2026</span><div><h3>Université de Strasbourg</h3><p class="degree">Licence Informatique · Bac+3</p></div></article>
+          <article class="education-row"><span class="date">2020</span><div><h3>Université Fédérale de Kazan</h3><p class="degree">Bachelor en physique technique · Bac+4</p><p class="education-note">Russie</p></div></article>
+          </div>
+        </section>
+        <section class="content-section" id="experience-fr" aria-labelledby="experience-heading-fr">
+          <div class="section-head"><h2 id="experience-heading-fr">Expérience professionnelle</h2><p>Freelance · À distance</p></div>
+          <article class="work-item">
+            <div class="work-head"><h3>Optima Fence and Deck</h3><span class="date">Fév. 2026 – aujourd’hui</span></div>
+            <p class="work-role">Développeur backend · Synchronisation et migration CRM</p>
+            <ul class="work-points"><li>Conception d’une synchronisation bidirectionnelle entre <strong>Housecall Pro et GoHighLevel</strong>, puis refonte pour <strong>ServiceTitan</strong> lors de la migration du client.</li><li>Remplacement progressif des automatisations Zapier par un backend Python/FastAPI : <strong>13 types d’événements webhook</strong>, gestion des doublons et reprise fiable après redémarrage.</li><li><strong>247 tests</strong>, intégration continue sur chaque pull request, déploiement sous Docker sur AWS Lightsail et <strong>alerting Telegram</strong>.</li></ul>
+            <div class="work-meta"><span class="work-tech">Python · FastAPI · Docker · AWS Lightsail</span><a class="source-link" href="https://github.com/McDonnies/optima-integrations-public" aria-label="Voir le code · Optima Fence and Deck">Voir le code <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>H Alliance</h3><span class="date">Mai – juin 2026</span></div>
+            <p class="work-role">Développeur backend · Automatisation des données</p>
+            <p class="work-copy">Synchronisation des APIs Meta Business / Instagram avec HubSpot CRM en JavaScript : extraction, transformation et mapping automatiques des données d’activité.</p>
 
-<section>
-  <h2>Experience</h2>
+            <div class="work-meta"><span class="work-tech">JavaScript · APIs Meta · HubSpot</span><a class="source-link" href="https://github.com/McDonnies/halliance-platform-public" aria-label="Voir le code · H Alliance">Voir le code <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>Client américain · Thumbtack</h3><span class="date">Nov. 2025 – début 2026</span></div>
+            <p class="work-role">Développeur backend · Passerelle API Thumbtack</p>
+            <ul class="work-points"><li>Pipeline de synchronisation entre trois sources : Thumbtack, HubSpot et Zoho.</li><li>Flux OAuth2 complet en FastAPI, espace d’administration Jinja2 pour les comptes connectés et les clés API clients. Mise en production sous Docker et nginx sur un serveur Linux que j’administre.</li></ul>
 
-  <div class="job">
-    <div class="job-head">
-      <span class="job-title">Backend Developer — Optima Fence and Deck</span>
-      <span class="job-date">Feb 2026 – present</span>
+            <div class="work-meta"><span class="work-tech">Python · FastAPI · PostgreSQL · Docker</span><a class="source-link" href="https://github.com/McDonnies/thumbtack-proxy-public" aria-label="Voir le code · Client américain · Thumbtack">Voir le code <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </section>
+        <section class="content-section" id="projects-fr" aria-labelledby="projects-heading-fr">
+          <div class="section-head"><h2 id="projects-heading-fr">Projets</h2><p>Open source & travaux universitaires</p></div>
+          <article class="work-item">
+            <div class="work-head"><h3>ServiceTitan MCP</h3></div>
+            <p class="work-role">Connecteur pour assistants IA</p>
+            <p class="work-copy">J’ai étendu un serveur MCP en Python pour connecter un assistant IA à l’API ServiceTitan : <strong>six outils en lecture seule, 131 tests</strong> et intégration continue. L’assistant peut consulter les clients, interventions et factures.</p>
+
+            <div class="work-meta"><span class="work-tech">Python · MCP · httpx</span><a class="source-link" href="https://github.com/McDonnies/servicetitan-mcp" aria-label="Voir le code · ServiceTitan MCP">Voir le code <span aria-hidden="true">↗</span></a></div>
+            <details><summary>Détails techniques</summary><p>Six outils MCP. Sur la fiche client documentée dans le dépôt, la réponse compacte représente environ 22 fois moins de tokens estimés que le JSON formaté, et 15 fois moins que le JSON minifié (caractères / 4). Tests automatisés et CI sur Python 3.11 à 3.13.</p></details>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>DrawParty</h3></div>
+            <p class="work-role">Jeu multijoueur en temps réel · Projet de fin de licence</p>
+            <p class="work-copy">Développement du gameplay en temps réel avec Node.js et Socket.io : salles, cycle de vie des parties, rotation des tours et synchronisation de l’état. Front React et TypeScript. Le mode « AI Judge » utilise <strong>Llama 4 via Groq</strong> pour deviner les dessins en direct.</p>
+
+            <div class="work-meta"><span class="work-tech">Node.js · Socket.io · React · TypeScript · Groq</span><a class="source-link" href="https://github.com/McDonnies/drawparty-public" aria-label="Voir le code · DrawParty">Voir le code <span aria-hidden="true">↗</span></a></div>
+
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>Arbre de décision</h3></div>
+            <p class="work-role">Apprentissage automatique</p>
+            <p class="work-copy">Une implémentation Python/NumPy qui estime quelles données contribuent à une prédiction, avec une méthode inspirée des valeurs de Shapley.</p>
+
+            <div class="work-meta"><span class="work-tech">Python · NumPy</span><a class="source-link" href="https://github.com/McDonnies/decision-tree-shapley" aria-label="Voir le code · Arbre de décision">Voir le code <span aria-hidden="true">↗</span></a></div>
+
+          </article>
+        </section>
+      </div>
+        <footer><nav class="contact-links" aria-label="Liens de contact">
+          <a class="email" href="mailto:daniil.maklakov@epitech.eu">daniil.maklakov@epitech.eu</a>
+          <a href="https://github.com/McDonnies">GitHub</a>
+          <a href="https://www.linkedin.com/in/maklakov-daniil/">LinkedIn</a>
+          <a class="cv-link" href="Daniil_Maklakov_CV.pdf" download aria-label="Télécharger le CV (PDF)">CV <span aria-hidden="true">↓</span></a>
+        </nav><span>© 2026 Daniil Maklakov</span></footer>
     </div>
-    <p>Freelance, remote. CRM integrations in Python/FastAPI, deployed and operated on AWS.</p>
-  </div>
+    <div class="frame portfolio" data-page="en" lang="en" hidden>
+      <div class="sidebar">
+      <aside class="profile" aria-labelledby="name-en">
+        <img class="portrait" src="photo.jpg" width="450" height="415" alt="Portrait of Daniil Maklakov">
+        <div class="identity">
+          <h1 id="name-en">Daniil <span>Maklakov</span></h1>
+          <p class="role">Backend developer</p>
+          <p class="location">Strasbourg · Paris / Île-de-France</p>
+        </div>
+        <p class="profile-note">Trained in physics, then computer science. Working with Python and TypeScript, freelance since late 2025.</p>
+        <nav class="section-nav" aria-label="Browse the portfolio"><a href="#education-en">Education</a><a href="#experience-en">Experience</a><a href="#projects-en">Projects</a></nav>
+      </aside>
+      <section class="sidebar-skills" aria-labelledby="skills-en">
+        <h2 id="skills-en">Skills</h2>
+        <dl class="skills"><div><dt>Automation</dt><dd>Python, FastAPI, REST APIs, webhooks, Zapier workflows, alerts and recurring tasks</dd></div><div><dt>AI &amp; agents</dt><dd>Claude Code, MCP client/server, LLM APIs (OpenAI, Llama, Groq), prompt engineering</dd></div><div><dt>Data</dt><dd>PostgreSQL, MySQL, SQL, ETL, mapping and deduplication</dd></div><div><dt>Web</dt><dd>TypeScript / JavaScript, Node.js, React, HTML / CSS, Jinja2</dd></div><div><dt>Production</dt><dd>Automated testing, CI/CD, Docker, nginx, Linux, AWS, Git / GitHub</dd></div><div><dt>Languages</dt><dd>French, English, Russian</dd></div></dl>
+      </section>
+      </div>
+      <div class="content">
+        <p class="intro">I connect the software a company uses: <strong>customer data synchronisation, authentication and automation.</strong></p>
+        <p class="intro-note">I handle the development, production deployment and maintenance of these services.</p>
+        <aside class="availability" aria-labelledby="availability-en">
+          <h2 id="availability-en">Seeking a work-study role · Python / AI</h2>
+          <p class="availability-note">Apprenticeship contract · Epitech MSc · Master’s level</p>
+          <table aria-labelledby="availability-en"><tbody><tr><th scope="row">Availability</th><td>Immediately</td></tr><tr><th scope="row">Schedule</th><td><div class="schedule"><span>6 weeks with the company</span><span>2 weeks at school</span></div></td></tr></tbody></table>
+        </aside>
+        <section class="content-section" id="education-en" aria-labelledby="education-heading-en">
+          <div class="section-head"><h2 id="education-heading-en">Education</h2></div>
+          <div class="education-list">
+          <article class="education-row education-upcoming"><span class="date">2026–2028</span><div><h3>Epitech</h3><p class="degree">MSc Information Systems Architect · Master’s level</p><p class="education-note">Work-study programme · Classes begin 5 October 2026</p></div></article>
+          <article class="education-row"><span class="date">2026</span><div><h3>University of Strasbourg</h3><p class="degree">BSc Computer Science</p></div></article>
+          <article class="education-row"><span class="date">2020</span><div><h3>Kazan Federal University</h3><p class="degree">Bachelor in Engineering Physics · Four-year degree</p><p class="education-note">Russia</p></div></article>
+          </div>
+        </section>
+        <section class="content-section" id="experience-en" aria-labelledby="experience-heading-en">
+          <div class="section-head"><h2 id="experience-heading-en">Professional experience</h2><p>Freelance · Remote</p></div>
+          <article class="work-item">
+            <div class="work-head"><h3>Optima Fence and Deck</h3><span class="date">Feb 2026 – present</span></div>
+            <p class="work-role">Backend developer · CRM synchronisation and migration</p>
+            <ul class="work-points"><li>Designed bidirectional synchronisation between <strong>Housecall Pro and GoHighLevel</strong>, then rebuilt it for <strong>ServiceTitan</strong> during the client’s migration.</li><li>Gradually replaced Zapier workflows with a Python/FastAPI backend: <strong>13 webhook event types</strong>, deduplication and reliable recovery after restarts.</li><li><strong>247 tests</strong>, continuous integration on every pull request, Docker deployment on AWS Lightsail and <strong>Telegram alerts</strong>.</li></ul>
+            <div class="work-meta"><span class="work-tech">Python · FastAPI · Docker · AWS Lightsail</span><a class="source-link" href="https://github.com/McDonnies/optima-integrations-public" aria-label="View code · Optima Fence and Deck">View code <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>H Alliance</h3><span class="date">May – Jun 2026</span></div>
+            <p class="work-role">Backend developer · Data automation</p>
+            <p class="work-copy">Synchronised the Meta Business / Instagram APIs with HubSpot CRM using JavaScript: automatic extraction, transformation and mapping of activity data.</p>
 
-  <div class="job">
-    <div class="job-head">
-      <span class="job-title">Backend Developer — H Alliance</span>
-      <span class="job-date">May – Jun 2026</span>
+            <div class="work-meta"><span class="work-tech">JavaScript · APIs Meta · HubSpot</span><a class="source-link" href="https://github.com/McDonnies/halliance-platform-public" aria-label="View code · H Alliance">View code <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>US client · Thumbtack</h3><span class="date">Nov 2025 – early 2026</span></div>
+            <p class="work-role">Backend developer · Thumbtack API gateway</p>
+            <ul class="work-points"><li>Data synchronisation pipeline connecting three sources: Thumbtack, HubSpot and Zoho.</li><li>Complete OAuth2 flow in FastAPI, with a Jinja2 admin interface for connected accounts and client API keys. Deployed with Docker and nginx on a Linux server that I administer.</li></ul>
+
+            <div class="work-meta"><span class="work-tech">Python · FastAPI · PostgreSQL · Docker</span><a class="source-link" href="https://github.com/McDonnies/thumbtack-proxy-public" aria-label="View code · US client · Thumbtack">View code <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </section>
+        <section class="content-section" id="projects-en" aria-labelledby="projects-heading-en">
+          <div class="section-head"><h2 id="projects-heading-en">Projects</h2><p>Open source & university work</p></div>
+          <article class="work-item">
+            <div class="work-head"><h3>ServiceTitan MCP</h3></div>
+            <p class="work-role">Connector for AI assistants</p>
+            <p class="work-copy">I extended a Python MCP server to connect an AI assistant to the ServiceTitan API: <strong>six read-only tools, 131 tests</strong> and continuous integration. The assistant can look up customers, jobs and invoices.</p>
+
+            <div class="work-meta"><span class="work-tech">Python · MCP · httpx</span><a class="source-link" href="https://github.com/McDonnies/servicetitan-mcp" aria-label="View code · ServiceTitan MCP">View code <span aria-hidden="true">↗</span></a></div>
+            <details><summary>Technical details</summary><p>Six MCP tools. On the customer record documented in the repository, the compact response uses roughly 22 times fewer estimated tokens than formatted JSON and 15 times fewer than minified JSON (characters / 4). Automated tests and CI on Python 3.11 to 3.13.</p></details>
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>DrawParty</h3></div>
+            <p class="work-role">Real-time multiplayer game · Final-year degree project</p>
+            <p class="work-copy">Built real-time gameplay with Node.js and Socket.io: rooms, game lifecycle, turn rotation and state synchronisation. React and TypeScript frontend. The “AI Judge” mode uses <strong>Llama 4 via Groq</strong> to guess drawings live.</p>
+
+            <div class="work-meta"><span class="work-tech">Node.js · Socket.io · React · TypeScript · Groq</span><a class="source-link" href="https://github.com/McDonnies/drawparty-public" aria-label="View code · DrawParty">View code <span aria-hidden="true">↗</span></a></div>
+
+          </article>
+          <article class="work-item">
+            <div class="work-head"><h3>Decision tree</h3></div>
+            <p class="work-role">Machine learning</p>
+            <p class="work-copy">A Python/NumPy implementation that estimates which inputs contribute to a prediction, using an approach inspired by Shapley values.</p>
+
+            <div class="work-meta"><span class="work-tech">Python · NumPy</span><a class="source-link" href="https://github.com/McDonnies/decision-tree-shapley" aria-label="View code · Decision tree">View code <span aria-hidden="true">↗</span></a></div>
+
+          </article>
+        </section>
+      </div>
+        <footer><nav class="contact-links" aria-label="Contact links">
+          <a class="email" href="mailto:daniil.maklakov@epitech.eu">daniil.maklakov@epitech.eu</a>
+          <a href="https://github.com/McDonnies">GitHub</a>
+          <a href="https://www.linkedin.com/in/maklakov-daniil/">LinkedIn</a>
+          <a class="cv-link" href="Daniil_Maklakov_CV.pdf" download aria-label="Download CV (PDF, French)">CV <span aria-hidden="true">↓</span></a>
+        </nav><span>© 2026 Daniil Maklakov</span></footer>
     </div>
-    <p>Freelance, remote. Meta Business and Instagram APIs synchronised with HubSpot CRM in TypeScript.</p>
-  </div>
+  </main>
 
-  <div class="job">
-    <div class="job-head">
-      <span class="job-title">Backend Developer — Thumbtack API gateway</span>
-      <span class="job-date">Nov 2025 – early 2026</span>
-    </div>
-    <p>Freelance, remote. OAuth 2.0 gateway and synchronisation pipeline across Thumbtack, HubSpot and Zoho. Still in production.</p>
-  </div>
+  <script>
+    const languageButtons = document.querySelectorAll('[data-language]');
+    const languagePages = document.querySelectorAll('[data-page]');
+    const languageSwitch = document.querySelector('.language-switch');
+    const pageMeta = {
+      fr: {
+        title: 'Daniil Maklakov — Développeur backend Python · Alternance',
+        description: 'Développeur backend freelance · Strasbourg et Paris. Python, intégrations de logiciels et automatisation. Recherche une alternance avec le MSc Epitech, 2026–2028.',
+        contacts: 'Liens de contact',
+        cv: 'Télécharger le CV (PDF)',
+        switchLabel: 'Choisir la langue',
+        skip: 'Aller au contenu',
+        portrait: 'Portrait de Daniil Maklakov',
+        locale: 'fr_FR',
+        alternate: 'en_GB',
+      },
+      en: {
+        title: 'Daniil Maklakov — Python backend developer · Work-study',
+        description: 'Freelance backend developer · Strasbourg and Paris. Python, software integrations and automation. Seeking a work-study role with the Epitech MSc, 2026–2028.',
+        contacts: 'Contact links',
+        cv: 'Download CV (PDF, French)',
+        switchLabel: 'Choose language',
+        skip: 'Skip to content',
+        portrait: 'Portrait of Daniil Maklakov',
+        locale: 'en_GB',
+        alternate: 'fr_FR',
+      },
+    };
 
-  <div class="job">
-    <div class="job-head">
-      <span class="job-title">BSc Computer Science — University of Strasbourg</span>
-      <span class="job-date">2023 – 2026</span>
-    </div>
-    <p>Preceded by a BSc in Engineering Physics, Kazan Federal University (2016 – 2020).</p>
-  </div>
-</section>
+    function setLanguage(language) {
+      if (language !== 'fr' && language !== 'en') return;
+      const meta = pageMeta[language];
+      document.documentElement.lang = language;
+      languagePages.forEach(page => { page.hidden = page.dataset.page !== language; });
+      languageButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === language));
+      });
+      document.title = meta.title;
+      document.querySelector('meta[name="description"]').content = meta.description;
+      document.querySelector('meta[property="og:title"]').content = meta.title;
+      document.querySelector('meta[property="og:description"]').content = meta.description;
+      document.querySelector('meta[property="og:locale"]').content = meta.locale;
+      document.querySelector('meta[property="og:locale:alternate"]').content = meta.alternate;
+      document.querySelector('meta[property="og:image:alt"]').content = meta.portrait;
+      document.querySelector('.header-contacts').setAttribute('aria-label', meta.contacts);
+      document.querySelector('.header-contacts .cv-link').setAttribute('aria-label', meta.cv);
+      document.querySelector('.skip-link').textContent = meta.skip;
+      languageSwitch.setAttribute('aria-label', meta.switchLabel);
+      const translatedHash = location.hash.replace(/-(fr|en)$/, '-' + language);
+      if (translatedHash !== location.hash && document.getElementById(translatedHash.slice(1))) {
+        history.replaceState(null, '', translatedHash);
+      }
+      try {
+        localStorage.setItem('portfolio-language', language);
+      } catch {
+        // Language selection remains usable when browser storage is unavailable.
+      }
+    }
 
-<section>
-  <h2>Projects</h2>
+    languageButtons.forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.language));
+    });
+    function languageFromHash() {
+      const match = location.hash.match(/-(fr|en)$/);
+      return match && document.getElementById(location.hash.slice(1)) ? match[1] : null;
+    }
 
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/servicetitan-mcp">servicetitan-mcp</a>
-      <span class="project-lang">Python</span>
-    </div>
-    <p>Read-only MCP server over the ServiceTitan API. Six task-shaped tools that each answer a question in one call, instead of mirroring the API endpoint for endpoint, and records findable by name, phone or external id rather than by Int64 id. The compact output measured 22× fewer tokens than the raw JSON on the same reads. Four API behaviours only surfaced by running it against a live tenant. 131 tests, CI on Python 3.11 to 3.13.</p>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/optima-integrations-public">optima-integrations</a>
-      <span class="project-lang">Python</span>
-    </div>
-    <p>Replaced the client's no-code Zapier automations with Python pollers and webhook handlers, removing the dependency without changing anything on the CRM side. Keeps GoHighLevel and ServiceTitan in two-way sync: 13+ webhook event types, status mapping, deduplication, plus lead intake from Yelp, Thumbtack and HouseCall Pro. Sanitized production codebase.</p>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/halliance-platform-public">halliance-platform</a>
-      <span class="project-lang">TypeScript</span>
-    </div>
-    <p>Integration platform monorepo: Fastify gateway with HMAC-preserving request forwarding and typed API clients for HubSpot, Aircall, eBay, Meta and Zoho. Sanitized production codebase.</p>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/thumbtack-proxy-public">thumbtack-proxy</a>
-      <span class="project-lang">Python</span>
-    </div>
-    <p>Production OAuth 2.0 reverse proxy for the Thumbtack API: full token lifecycle, FastAPI and PostgreSQL, Dockerised behind nginx, with an internal admin panel. Built in late 2025 and still running unattended.</p>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/drawparty-public">drawparty</a>
-      <span class="project-lang">TypeScript</span>
-    </div>
-    <p>Real-time multiplayer drawing game with an AI Judge mode: a vision LLM watches the canvas and guesses drawings live. Next.js, Electron, socket.io, Prisma. Built in a 9-person team.</p>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
-      <a class="project-name" href="https://github.com/McDonnies/decision-tree-shapley">decision-tree-shapley</a>
-      <span class="project-lang">Python</span>
-    </div>
-    <p>Decision tree implemented from scratch in NumPy, with per-instance explainability via Monte Carlo Shapley-value attribute contributions.</p>
-  </div>
-</section>
-
-<section class="stack">
-  <h2>Stack</h2>
-  <p><b>Backend:</b> Python (FastAPI, httpx), TypeScript (Fastify, Node.js), PostgreSQL</p>
-  <p><b>Integrations:</b> OAuth2, REST APIs, webhooks, CRM sync, LLM APIs</p>
-  <p><b>Ops:</b> Docker, Linux, nginx, Git, CI/CD</p>
-</section>
-
-<section class="contact">
-  <h2>Contact</h2>
-  <p><a href="mailto:daniil.maklakov8@gmail.com">daniil.maklakov8@gmail.com</a></p>
-  <p><a href="https://github.com/McDonnies">github.com/McDonnies</a> · <a href="https://www.linkedin.com/in/maklakov-daniil/">linkedin.com/in/maklakov-daniil</a></p>
-  <p><a href="Daniil_Maklakov_CV.pdf">Download CV (PDF)</a></p>
-  <p>English · French · Russian</p>
-</section>
-
-<footer>© 2026 Daniil Maklakov</footer>
-</div>
-
+    let initialLanguage = languageFromHash();
+    if (!initialLanguage) {
+      try {
+        initialLanguage = localStorage.getItem('portfolio-language');
+      } catch {
+        // The static French page is the default when storage is unavailable.
+      }
+    }
+    setLanguage(initialLanguage === 'en' ? 'en' : 'fr');
+    languageSwitch.hidden = false;
+    window.addEventListener('hashchange', () => {
+      const language = languageFromHash();
+      if (language && language !== document.documentElement.lang) {
+        setLanguage(language);
+        document.getElementById(location.hash.slice(1)).scrollIntoView();
+      }
+    });
+  </script>
 </body>
 </html>

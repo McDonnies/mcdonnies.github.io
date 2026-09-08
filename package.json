@@ -1,0 +1,11 @@
+{
+  "name": "daniil-maklakov-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/portfolio-smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.59.1"
+  }
+}
