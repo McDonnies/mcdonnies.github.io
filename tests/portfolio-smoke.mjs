@@ -187,3 +187,32 @@ test('shared section links display the matching language and stay valid after sw
     assert.equal(await page.locator('#education-en').isVisible(), true);
   } finally { await page.close(); }
 });
+
+test('back-to-top stays outside content and returns keyboard focus to the header', async () => {
+  const page = await browser.newPage({ reducedMotion: 'reduce' });
+  try {
+    for (const width of [320, 375, 768, 1440]) {
+      await page.setViewportSize({ width, height: 812 });
+      for (const language of ['fr', 'en']) {
+        await page.goto(baseURL);
+        await page.locator(`[data-language="${language}"]`).click();
+        assert.equal(await page.locator('.back-to-top').isHidden(), true);
+        await page.locator(`.section-nav a[href="#skills-${language}"]`).click();
+        await page.locator('.back-to-top').waitFor({ state: 'visible' });
+        assert.equal(await page.locator('.back-to-top').getAttribute('aria-label'), language === 'fr' ? 'Retour en haut' : 'Back to top');
+        const clearOfContent = await page.locator('.back-to-top').evaluate(button => {
+          const rect = button.getBoundingClientRect();
+          return [...document.querySelectorAll('.frame')].filter(frame => !frame.hidden)
+            .every(frame => frame.getBoundingClientRect().right < rect.left);
+        });
+        assert.equal(clearOfContent, true, `Control overlaps content at ${width}px (${language})`);
+        await page.locator('.back-to-top').focus();
+        await page.keyboard.press('Enter');
+        await page.waitForFunction(() => window.scrollY === 0);
+        assert.equal(new URL(page.url()).hash, '');
+        assert.equal(await page.locator('.header-contacts .email').evaluate(element => element === document.activeElement), true);
+        await page.locator('.back-to-top').waitFor({ state: 'hidden' });
+      }
+    }
+  } finally { await page.close(); }
+});

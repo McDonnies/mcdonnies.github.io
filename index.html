@@ -33,7 +33,7 @@
     a:hover { color: var(--accent); }
     a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
     [hidden] { display: none !important; }
-    .frame { width: min(90%, 1680px); margin-inline: auto; }
+    .frame { width: min(90%, calc(100% - 112px), 1680px); margin-inline: auto; }
     .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
     .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 28px; font-size: 16px; }
     .contact-links a { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
@@ -122,7 +122,7 @@
       .education-list { grid-template-columns: 1fr; }
     }
     @media (max-width: 800px) {
-      .frame { width: calc(100% - 40px); }
+      .frame { width: calc(100% - 72px); margin-left: 16px; margin-right: 56px; }
       .topbar { gap: 12px; padding: 12px 0; align-items: flex-start; }
       .header-contacts { gap: 0 20px; }
       .header-contacts .email { flex-basis: 100%; font-size: 14px; }
@@ -157,9 +157,9 @@
       .language-switch { position: absolute; top: 8px; right: -6px; border: 0; padding: 0; gap: 0; }
       .language-switch button { min-width: 32px; min-height: 36px; font-size: 13px; }
       .contact-links { font-size: 15px; gap: 8px 24px; }
-      .profile { grid-template-columns: minmax(0, 1fr) 112px; gap: 0 16px; }
-      .portrait { width: 112px; }
-      h1 { font-size: 34px; }
+      .profile { grid-template-columns: minmax(0, 1fr) 96px; gap: 0 12px; }
+      .portrait { width: 96px; }
+      h1 { font-size: 32px; }
       h1 span { display: block; }
       .role { font-size: 17px; }
       .availability { padding: 20px; }
@@ -170,6 +170,10 @@
       .education-list, .education-upcoming, .skills { grid-template-columns: 1fr; }
       .education-upcoming { padding: 22px; }
     }
+    .back-to-top { position: fixed; right: 6px; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 2; width: 44px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 5px 0; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--muted); font: inherit; line-height: 1.2; cursor: pointer; }
+    .back-to-top .up-arrow { color: var(--accent); font-size: 21px; }
+    .back-to-top .up-label { font-size: 11px; }
+    .back-to-top:hover { color: var(--ink); border-color: var(--accent); }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
@@ -372,7 +376,9 @@
     </div>
   </main>
 
+  <button class="back-to-top" type="button" aria-label="Retour en haut" hidden><span class="up-arrow" aria-hidden="true">↑</span><span class="up-label">Haut</span></button>
   <script>
+    const backToTop = document.querySelector('.back-to-top');
     const languageButtons = document.querySelectorAll('[data-language]');
     const languagePages = document.querySelectorAll('[data-page]');
     const languageSwitch = document.querySelector('.language-switch');
@@ -384,6 +390,8 @@
         cv: 'Télécharger le CV (PDF)',
         switchLabel: 'Choisir la langue',
         skip: 'Aller au contenu',
+        backToTop: 'Retour en haut',
+        upLabel: 'Haut',
         portrait: 'Portrait de Daniil Maklakov',
         locale: 'fr_FR',
         alternate: 'en_GB',
@@ -395,6 +403,8 @@
         cv: 'Download CV (PDF, French)',
         switchLabel: 'Choose language',
         skip: 'Skip to content',
+        backToTop: 'Back to top',
+        upLabel: 'Top',
         portrait: 'Portrait of Daniil Maklakov',
         locale: 'en_GB',
         alternate: 'fr_FR',
@@ -420,6 +430,8 @@
       document.querySelector('.header-contacts .cv-link').setAttribute('aria-label', meta.cv);
       document.querySelector('.skip-link').textContent = meta.skip;
       languageSwitch.setAttribute('aria-label', meta.switchLabel);
+      backToTop.setAttribute('aria-label', meta.backToTop);
+      backToTop.querySelector('.up-label').textContent = meta.upLabel;
       const translatedHash = location.hash.replace(/-(fr|en)$/, '-' + language);
       if (translatedHash !== location.hash && document.getElementById(translatedHash.slice(1))) {
         history.replaceState(null, '', translatedHash);
@@ -430,6 +442,18 @@
         // Language selection remains usable when browser storage is unavailable.
       }
     }
+
+    function updateBackToTop() {
+      backToTop.hidden = window.scrollY < 300;
+    }
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    window.addEventListener('pageshow', updateBackToTop);
+    backToTop.addEventListener('click', () => {
+      document.querySelector('.header-contacts .email').focus({ preventScroll: true });
+      history.replaceState(null, '', location.pathname + location.search);
+      window.scrollTo({ top: 0 });
+    });
+    updateBackToTop();
 
     languageButtons.forEach(button => {
       button.addEventListener('click', () => setLanguage(button.dataset.language));
